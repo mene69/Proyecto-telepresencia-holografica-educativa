@@ -44,7 +44,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>TEHE</span></strong> Todos los derechos reservados.
+        &copy; Copyright <strong><span>T.E.H.E</span></strong> Todos los derechos reservados.
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

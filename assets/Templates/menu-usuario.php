@@ -14,7 +14,7 @@
           <li><a href="#services">¿Ayuda?</a></li>
           <li><a href="#portfolio">Modulo de plantillas</a></li>
           <li><a href="#team">Bienvenido(a) "ROL" </a></li>
-          <li><a href="blog.html">Editar Perfil</a></li>
+          <li><a href="#">Editar Perfil</a></li>
           <li><a href="#">Cerrar Sesión</a>
             <!--<ul>
               <li><a href="#">Drop Down 1</a></li>
