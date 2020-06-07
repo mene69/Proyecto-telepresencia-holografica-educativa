@@ -94,7 +94,8 @@
         </div>
 
       </div>
-    </section><!-- Fin Sección sobre nosotros -->
+    </section>
+    <!-- Fin Sección sobre nosotros -->
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
