@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #0880e8;
+  color: rgb(255, 8, 255);
 }
 
 a:hover {
-  color: #2b99f8;
+  color: rgb(255, 8, 255);
   text-decoration: none;
 }
 
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(164, 1, 170, 0.932);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header.header-scrolled {
   top: 0;
-  background: rgba(5, 87, 158, 0.9);
+  background: rgba(1, 217, 255, 0.932);
 }
 
 #header .logo {
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #f6b024;
+  background-color: rgba(200, 2, 207, 0.9);
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #0880e8;
+  color: rgba(1, 217, 255, 0.932);
 }
 
 .nav-menu .drop-down > a:after {
@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #f6b024;
+  color: rgba(1, 217, 255, 0.932);
   text-decoration: none;
 }
 
@@ -477,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(6, 101, 183, 0.9);
+  background: rgba(200, 2, 207, 0.9);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -2276,7 +2276,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #05579e;
+  background: rgba(1, 217, 255, 0.932);
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -2330,7 +2330,7 @@ section {
 }
 
 #footer .footer-top {
-  background: #065fad;
+  background: rgba(1, 217, 255, 0.932);
   padding: 60px 0 30px 0;
 }
 
@@ -2370,7 +2370,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #f6b024;
+  background: rgba(247, 29, 255, 0.9);
   color: #fff;
   text-decoration: none;
 }
@@ -2396,7 +2396,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #5db1f9;
+  color:  rgb(255, 8, 255);
   font-size: 18px;
   line-height: 1;
 }
@@ -2443,5 +2443,5 @@ section {
 }
 
 #footer .credits a {
-  color: #f6b024;
+  color: rgb(255, 8, 255);
 }
