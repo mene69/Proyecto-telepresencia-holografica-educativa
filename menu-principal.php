@@ -48,7 +48,8 @@
       </a>
 
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 

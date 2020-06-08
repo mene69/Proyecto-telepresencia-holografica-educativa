@@ -2,20 +2,20 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="#header" class="scrollto">TEHE</a></h1>
+      <h1 class="logo mr-auto"><a href="#header" class="scrollto">T.E.H.E</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#header">Menu Principal</a></li>
-          <li><a href="#contact">Contactos</a></li>
-          <li><a href="#contact">Realizar llamada</a></li>
+          <li class="active"><a href="menu-principal">Menú Principal</a></li>
+          <li><a href="contactos.php #contact">Contactos</a></li>
+          <li><a href="realizar_llamada.php #hero">Realizar llamada</a></li>
           <li><a href="#services">¿Ayuda?</a></li>
-          <li><a href="#portfolio">Modulo de plantillas</a></li>
+          <li><a href="#portfolio">Módulo de plantillas</a></li>
           <li><a href="#team">Bienvenido(a) "ROL" </a></li>
           <li><a href="#">Editar Perfil</a></li>
-          <li><a href="#">Cerrar Sesión</a>
+          <li><a href="index.php">Cerrar Sesión</a>
             <!--<ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="drop-down"><a href="#">Deep Drop Down</a>
