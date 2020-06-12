@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Links de cada modulo</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Menu Principal</a></li>
@@ -15,7 +15,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h4>Contacto</h4>
             <p>
               Universidad Tecnologica · Avda. Fco de Aguirre 389<br>
@@ -24,16 +24,15 @@
               <strong>Numero de Telefono:</strong> +569 58224930<br>
               <strong>Correo:</strong> tehechile@gmail.com<br>
             </p>
-
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-info">
+          <div class="col-lg-4 col-md-6 footer-info">
             <h3>Acerca de TEHE</h3>
             <p>Links de redes sociales:</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://twitter.com/e_echile" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.instagram.com/t.e.h.eproject/?hl=es-la" class="instagram"><i class="bx bxl-instagram"></i></a>
               <!--<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
             </div>

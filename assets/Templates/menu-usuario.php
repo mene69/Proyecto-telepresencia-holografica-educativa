@@ -13,8 +13,8 @@
           <li><a href="realizar_llamada.php #hero">Realizar llamada</a></li>
           <li><a href="#services">¿Ayuda?</a></li>
           <li><a href="modulo_plantillas.php #contact">Módulo de plantillas</a></li>
-          <li><a href="#team">Bienvenido(a) "ROL" </a></li>
-          <li><a href="#">Editar Perfil</a></li>
+          <li><p>Bienvenido(a) "Nombre" </p></li>
+          <li><a href="editar_perfil.php #contact">Editar Perfil</a></li>
           <li><a href="index.php">Cerrar Sesión</a>
             <!--<ul>
               <li><a href="#">Drop Down 1</a></li>

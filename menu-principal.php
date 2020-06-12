@@ -188,7 +188,7 @@
                 holográfica.</p>
             </div>
           </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
+          <center><div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300"></center>
             <div class="icon-box">
               <i class="icofont-image"></i>
               <h4><a href="#">Caja Holográfica</a></h4>

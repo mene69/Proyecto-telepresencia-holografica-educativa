@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
@@ -10,7 +9,7 @@
 <body>
 <div class="wrapper fadeInDown">
 <center> <div class="wrapper fadeInDown"> <img src="assets/img/Logo TEHE.png" width="100" lenght="100"></div> </center>
-<h1>Bienvenido a: Proyecto T.E.H.E</h1>
+<h1>Proyecto T.E.H.E</h1>
   <div id="formContent">
     <!-- Tabs Titles -->
     <h2 class="active"> Inicio de sesión </h2>
@@ -22,9 +21,9 @@
 
     <!-- Inicio Formulario de Inicio de Sesion -->
     <form method="POST" name="form_login" id="form_login" action="menu-principal.php">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <a class="underlineHover" href="#" id="rec_contrasenia">¿Ha olvidado su contraseña?</a>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingrese su correo">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Ingrese su contraseña">
+      <a class="underlineHover" href="#" name="rec_contrasenia" id="rec_contrasenia">¿Ha olvidado su contraseña?</a>
       <input type="submit" class="fadeIn fourth" value="Conectarse">
     </form>
     <!-- Cierre Formulario de Inicio de Sesion -->
