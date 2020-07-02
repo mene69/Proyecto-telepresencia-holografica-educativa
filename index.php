@@ -1,30 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-include "recursos/conexion.php";
-session_start();
-$nombre1 = $_POST['nombre1'];
-$pass1 = $_POST['pass1'];
-$consulta = $pdo->prepare("SELECT * FROM bdvianso.usuario WHERE nombre=:nombre1 AND pass=:pass1");
-$consulta->bindParam(':nombre1', $nombre1);
-$consulta->bindParam(':pass1', $pass1);
-$consulta->execute();
-if ($consulta->rowCount()) {
-    session_start();
-    $fila = $consulta->fetch();
-    $_SESSION['perfil'] = $fila['perfil'];
-    $_SESSION['id_usuario'] = $fila['id_usuario'];
-    $_SESSION['nombre'] = $fila['nombre'];
-    $_SESSION['pass'] = $fila['pass'];
-
-    header("Location: home.php");
-
-} else {
-    //header("Location: home.php");
-}
-
-?>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -46,11 +20,11 @@ if ($consulta->rowCount()) {
     </div>-->
 
     <!-- Inicio Formulario de Inicio de Sesion -->
-    <form method="POST" name="form_login" id="form_login" action="menu-principal.php">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Ingrese su correo">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Ingrese su contraseña">
+    <form method="POST" name="form_login" id="form_login" action="validar_inicio.php" enctype="multipart/form-data">
+      <input type="text" class="fadeIn second" name="email" id="email" placeholder="ejemplo1@email.com" required>
+      <input type="text"  class="fadeIn third" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña" required>
       <a class="underlineHover" href="#" name="rec_contrasenia" id="rec_contrasenia">¿Ha olvidado su contraseña?</a>
-      <input type="submit" class="fadeIn fourth" value="Conectarse">
+      <button type="submit" class="fadeIn fourth" name="btn_conn" id="btn_conn" value="btn_conn">Conectarse</button>
     </form>
     <!-- Cierre Formulario de Inicio de Sesion -->
 

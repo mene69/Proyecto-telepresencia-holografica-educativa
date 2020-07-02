@@ -1,3 +1,58 @@
+<?php
+include ("recursos/conexion.php");
+session_start();
+//Rescate de variables del formulario utilizando metodo POST
+$nombre=(isset($_POST['nombre']))?$_POST['nombre']:"";
+$apellido=(isset($_POST['apellido']))?$_POST['apellido']:"";
+$contrasena=(isset($_POST['contrasena']))?$_POST['contrasena']:"";
+$rut=(isset($_POST['rut']))?$_POST['rut']:"";
+$rutver=(isset($_POST['rutver']))?$_POST['rutver']:"";
+$nac=(isset($_POST['nac']))?$_POST['nac']:"";
+$direccion=(isset($_POST['direccion']))?$_POST['direccion']:"";
+$email=(isset($_POST['email']))?$_POST['email']:"";
+$telefono=(isset($_POST['telefono']))?$_POST['telefono']:"";
+$estado='4';
+$cargo=(isset($_POST['cargo']))?$_POST['cargo']:"";
+$boton=(isset($_POST['btn_registro']))?$_POST['btn_registro']:"";
+
+switch($boton)
+{
+// estructura de la base de datos: Tabla Cliente:
+// idCliente, 
+// Nombre, 
+// Apellido, 
+// Rut, 
+// NumeroVerificador, 
+// FechaNacimiento, (YYYY-MM-DD)
+// Direccion, 
+// Correo, 
+// Telefono, 
+// Estado_idEstado, 
+// Cargo_idCargo, 
+// Contrasena
+	case "btn_registro":
+	$sentencia=$pdo->prepare("INSERT INTO tehe.cliente(idCliente, Nombre, Apellido, Rut, NumeroVerificador, FechaNacimiento, Direccion, Correo, Telefono, Estado_idEstado, Cargo_idCargo, Contrasena)VALUES(NULL,'".$nombre."','".$apellido."','".$rut."','".$rutver."','".$nac."','".$direccion."','".$email."','".$telefono."','".$estado."','".$cargo."','".$contrasena."')");
+	$sentencia->bindParam("Nombre",$nombre);
+	$sentencia->bindParam("Apellido",$apellido);
+	$sentencia->bindParam("Rut",$rut);
+	$sentencia->bindParam("NumeroVerificador",$rutver);
+	$sentencia->bindParam("FechaNacimiento",$nac);
+      $sentencia->bindParam("Direccion",$direccion);
+      $sentencia->bindParam("Correo",$email);
+      $sentencia->bindParam("Telefono",$telefono);
+      $sentencia->bindParam("Estado_idEstado",$estado);
+      $sentencia->bindParam("Cargo_idCargo",$cargo);
+      $sentencia->bindParam("Contrasena",$contrasena);
+	$sentencia->execute();
+      header("location: index.php");
+	break;
+		
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,71 +66,35 @@
 </head>
 <body>
 <div class="container">
+<a href="index.php">Volver</a>
 		<div class="form__top">
 			<h2>Formulario <span>Registro</span></h2>
       </div>
       <!-- Formulario de registro de usuario, Campos: -->
-		<form class="form__reg" action="">
-            <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombre" required autofocus>
-            <input class="input" type="text" placeholder="&#128100;  Apellidos" name="apellido"  required autofocus>
-            <input class="input" type="email" placeholder="&#128231;  Email" name="email" required>
-            <input class="input" type="date" placeholder="# ; Fecha de Nacimiento" name="fech" required>
+	<form class="form__reg" id="form_reg" name="form_reg" enctype="multipart/form-data" method="POST" action="">
+            <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombre" id="nombre" value="<?php echo $nombre; ?>" required autofocus>
+            <input class="input" type="text" placeholder="&#128100;  Apellidos" name="apellido" id="apellido" value="<?php echo $apellido; ?>"  required autofocus>
+            <input class="input" type="password" placeholder="&#9919;  Contraseña" name="contrasena" id="contrasena" value="<?php echo $contrasena; ?>" required autofocus>
             <div>
-            <input class="input" type="text" placeholder="&#128199;  Rut" name="rut" id="rut" required autofocus> <input class="input" type="text" placeholder="" name="rutver" id="rutver"  required autofocus>
+            <input class="input" type="text" placeholder="&#128199;  Rut" name="rut" id="rut" value="<?php echo $rut; ?>" required autofocus> <input class="input" type="text" placeholder="" name="rutver" id="rutver" value="<?php echo $rutver; ?>"  required autofocus>
             </div>
-            <input class="input" type="text" placeholder="&#128188;  Cargo" name="cargo" required autofocus>
-            <div class="container">
-            <form>
-            <!--<div class="form-group">
-                  <label for="sel1">Cargo:</label>
-                  <select class="form-control" id="sel1">
-                        <option>Alumno</option>
-                        <option>Profesor</option>
-                  </select>
-            </div>
-            </form>
-            </div>-->
-            <input class="input" type="text" placeholder="&#128222;  Telefono" name="telefono" required>
-            <input class="input" type="text" placeholder="&#8962;  Región" name="region" required>
-            <input class="input" type="password" placeholder="&#9919;  Contraseña" name="contraseña" required autofocus>
+            <input class="input" type="text" placeholder="&#128197; YYYY-MM-DD ; Fecha de Nacimiento " name="nac" id="nac" value="<?php echo $nac; ?>" required>
+            <input class="input" type="text" placeholder="&#127968; Sector-#-Ciudad" name="direccion" id="direccion" value="<?php echo $direccion; ?>" required>
+            <input class="input" type="email" placeholder="&#128232; pepe@gmail.com" name="email" id="email" value="<?php echo $email; ?>"  required>
+            <input class="input" type="tel" pattern="[0-8]{8}" maxlenght="8" placeholder="&#128222; Número telefónico: XXXXXXXX" ;  name="telefono" id="telefono" value="<?php echo $telefono; ?>" required>
+            <input class="input" type="number" lenght="2" min="1" max="2" placeholder="&#128188;  Cargo, 1: Estudiante 2: Docente" name="cargo" id="cargo" value="<?php echo $cargo; ?>" required autofocus>
             <div class="btn__form">
-            	<input class="btn__submit" type="submit" value="REGISTRAR">
-            	<input class="btn__reset" type="reset" value="LIMPIAR">
+                  <input  class="btn__reset" type="reset" name="btn_reset" value="Limpiar"></input> <br>
+            	<button class="btn__submit" type="submit" name="btn_registro" value="btn_registro">Registrarse</button> <br>
             </div>
-		</form>
-	</div>
+                  <div class="container"> 
 
-<?php
+                  </div>
+	</form>
+</div>
 
-//Incluimos la conexión a la base de datos.
-include '../recursos/conexion.php';
 
-//Rescatamos los datos del otro archivo mediante el metodo POST.
-//$nombre = $_POST["nombre"];
-//$apellido = $_POST["apellido"];
-//$email = $_POST["email"];
-//$fech = $_POST["fech"];
-//$region = $_POST["region"];
-//$clave = $_POST["clave"];
-//$rut = $_POST["rut"];
-//$telefono = $_POST["telefono"];
 
-//Consulta para insertar en la pagina web
-$insertar = "INSERT INTO Usuario(NPropioVinculacion, FechaInscripcion, Nombre, Apellido, Telefono, Correo, NomUsuario, Clave) VALUES (null, '2019-06-26','$nombre', '$apellido', '$telefono', '$correo', '$usuario', '$clave')";
-
-//Ejecutamos la consulta mysqli_query la cual nos permitirar rescatar los resultados para convertirlos en un buffer.
-
-$resultado = mysqli_query($conexion, $insertar);
-
-if (!$resultado) {
-      echo 'Error al registrarse';
-} else {
-      header("location:../index.html");
-}
-
-//Cerrar la conexión
-mysqli_close($conexion);
-?>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-
+<?php include ("recursos/conexion.php"); ?>
 <?php include ("assets/Templates/header.php");?>
 <?php include ("assets/Templates/menu-usuario.php");?>
 
@@ -111,7 +111,7 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
 
             <div class="content">
-              <h3>Producto Principal: <strong>Caja Holgráfica Educativa</strong></h3>
+              <h3>Producto Principal: <strong>Caja Holográfica Educativa</strong></h3>
               <p>
                 A continuación se resolverán las dudas de la construcción y más puntos importantes de la maqueta de la Caja Holográfica Educativa.
               </p>
@@ -138,7 +138,7 @@
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="300">
-                  <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> ¿Que beneficios tiene la caja en la utilización de los holgramas? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> ¿Que beneficios tiene la caja en la utilización de los hologramas? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
                     <p>
                       El beneficio que tiene la caja educativa en los hologramas es la visualización de imagenes en 3D, directamente en vivo y sincronizada en la plataforma web y movil.
@@ -170,7 +170,7 @@
             <div class="icon-box">
               <i class="icofont-computer"></i>
               <h4><a href="#">Plataforma web</a></h4>
-              <p>Aplicación Web (Donde usted se encuentra ahora)
+              <p>Aplicación Web (Donde se encuentra usted ahora)
                 Nuestra aplicación web consta de un servicio de llamadas, donde el cliente
                 grabará (Audio y video),
                 para que este sea mostrado en nuestro producto núcleo; la caja holográfica.

@@ -1,3 +1,4 @@
+<?php include ("recursos/conexion.php"); ?>
 <?php include ("assets/Templates/header.php");?>
 <?php include ("assets/Templates/menu-usuario.php");?>
 
